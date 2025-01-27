@@ -1,0 +1,23 @@
+header {
+    background-color: lightsalmon;
+}
+#food_listing {
+    display: flex;
+    flex-direction: column;
+    width: 100% - 300px;
+    flex: 1;
+    background-color: lightgreen;
+}
+#shopping_cart {
+    width: 300px;
+    background-color: lightskyblue;
+    text-align: center;
+}
+#content_wrapper {
+    display: flex;
+}
+.food_item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 50px 10px;
+}
