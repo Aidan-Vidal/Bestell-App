@@ -7,16 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bestell App</title>
   </head>
-  <body>
+  <body onload="init()">
     <header>
       <img src="./assets/Logo/Bestell App- Logo.svg" alt="Logo" />
     </header>
     <div id="content_wrapper">
-      <div id="food_listing"></div>
-      <div id="shopping_cart"><h2>Warenkorb</h2></div>
+      <div id="food_section"></div>
+      <div id="cart_section">
+        <h2>Warenkorb</h2>
+        <div id="shopping_cart">Added items will be displayed here!</div>
+      </div>
     </div>
   </body>
-  <script src="scripts/template.js"></script>
+  <script src="scripts/init.js"></script>
   <script src="scripts/db.js"></script>
   <script src="script.js"></script>
 </html>
