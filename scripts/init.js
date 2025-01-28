@@ -22,18 +22,24 @@ function init() {
     // (2)
     for (let index = 0; index < listing.length; index++) {
         
+        // Food Section
         document.getElementById(`${listing[index].category}`).innerHTML +=
-        `<div>
-          <div class="food_item">
-            <span class="name"></span>
-            <span class="description"></span>
-            <span class="price"></span>
-          </div>
+        `<div class="space_between">
+            <div class="food_item">
+                <span class="name"></span>
+                <span class="description"></span>
+                <span class="price"></span>
+            </div>
+            <button onclick="addToCart(${index})">+</button>
         </div>`
+
+        // Shopping-cart Section
+        document.getElementById('shopping_cart').innerHTML +=
+        `<div class="hidden" id="${listing[index].name}">${listing[index].name}</div>`
 
         // (3)
         document.getElementsByClassName('name')[index].innerHTML += listing[index].name;
         document.getElementsByClassName('description')[index].innerHTML += listing[index].description;
-        document.getElementsByClassName('price')[index].innerHTML += listing[index].price.toFixed(2)+" €";
+        document.getElementsByClassName('price')[index].innerHTML += `<br><b>${listing[index].price.toFixed(2)} €</b></br>`;
     }
 }
