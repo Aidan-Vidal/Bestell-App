@@ -2,9 +2,10 @@ function addToCart(index) {
     document.getElementById(`${listing[index].name}`).innerHTML =
         `<div class="cart_spacing">
             <div class="shopping_cart">
-                <button onclick="decrease(${index})"><img src="./assets/img/minus-1270000_640.png" alt="Minus_img"></button>
+                <img onclick="delete_all(${index})" src="./assets/img/delete-2935433_640.png" alt="delete_img"></img>
+                <img onclick="decrease(${index})" src="./assets/img/minus-1270000_640.png" alt="Minus_img"></img>
                 <div id="${listing[index].name}_amount"></div>
-                <button onclick="increase(${index})"><img src="./assets/img/plus-1270001_640.png" alt="Plus_img"></button>
+                <img onclick="increase(${index})" src="./assets/img/plus-1270001_640.png" alt="Plus_img"></img>
                 <div id="${listing[index].name}_name"></div>
             </div>
                 <div id="${listing[index].name}_price"></div>
@@ -52,4 +53,10 @@ function refresh_cart(index) {
 function display_showcase(index) {
     document.getElementById('showcase').innerHTML =
     `<img src="./assets/img/${listing[index].image}"></img>`;
+}
+
+function delete_all(index) {
+    listing[index].amount = 0;
+    document.getElementById(`${listing[index].name}`).classList.add("hidden");
+    refresh_cart(index);
 }

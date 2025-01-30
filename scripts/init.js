@@ -12,7 +12,7 @@ function init() {
             category.push(listing[index].category);
             document.getElementById('food_section').innerHTML +=
                 `<div id=${new_category}>
-                    <h2 id=${new_category}>${new_category}</h2>
+                    <h1 id=${new_category}>${new_category}</h1>
                 </div>`
         } else {
             console.log(`Category ${new_category} already exists!`)

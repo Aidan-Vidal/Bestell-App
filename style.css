@@ -1,3 +1,27 @@
+@font-face {
+    font-family: "Rouge Script";
+    src: url(./assets/fonts/RougeScript-Regular.ttf);
+}
+@font-face {
+    font-family: "Radley";
+    src: url(./assets/fonts/Radley-Regular.ttf);
+}
+div {
+    font-family: "Radley";
+    font-size: 16px;
+}
+h1 {
+    font-family: "Rouge Script";
+    text-align: center;
+    font-size: 48px;
+}
+.name {
+    font-family: "Rouge Script";
+    font-size: 32px;
+}
+.price {
+    font-size: 21px;
+}
 header {
     display: flex;
     background-color: lightsalmon;
@@ -16,7 +40,7 @@ header img {
 }
 #shopping_cart {
     width: 400px;
-    text-align: start;
+    text-align: center;
     padding-left: 24px;
 }
 #content_wrapper {
@@ -68,9 +92,6 @@ header img {
     width: 180px;
     height: 120px;
     border-radius: 10px;
-}
-h2 {
-    text-align: center;
 }
 .food_item {
     display: flex;
