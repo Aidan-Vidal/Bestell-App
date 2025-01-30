@@ -24,13 +24,17 @@ function init() {
         
         // Food Section
         document.getElementById(`${listing[index].category}`).innerHTML +=
+
         `<div class="space_between">
             <div class="food_item">
-                <span class="name"></span>
-                <span class="description"></span>
-                <span class="price"></span>
+                <span class="image" onclick="display_showcase(${index})"></span>
+                <div class="food_info">
+                    <span class="name"></span>
+                    <span class="description"></span>
+                    <span class="price"></span>
+                </div>
             </div>
-            <button onclick="addToCart(${index})">+</button>
+            <img onclick="addToCart(${index})" src="./assets/img/plus-1270001_640.png" alt="Plus_img">
         </div>`
 
         // Shopping-cart Section
@@ -38,8 +42,9 @@ function init() {
         `<div class="hidden" id="${listing[index].name}">${listing[index].name}</div>`
 
         // (3)
-        document.getElementsByClassName('name')[index].innerHTML += listing[index].name;
-        document.getElementsByClassName('description')[index].innerHTML += listing[index].description;
-        document.getElementsByClassName('price')[index].innerHTML += `<br><b>${listing[index].price.toFixed(2)} €</b></br>`;
+        document.getElementsByClassName('image')[index].innerHTML = `<img src="./assets/img/${listing[index].image}">`;
+        document.getElementsByClassName('name')[index].innerHTML = listing[index].name;
+        document.getElementsByClassName('description')[index].innerHTML = listing[index].description;
+        document.getElementsByClassName('price')[index].innerHTML = `<br><b>${listing[index].price.toFixed(2)} €</b></br>`;
     }
 }
